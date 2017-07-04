@@ -35,11 +35,13 @@ class Dashboard extends Component {
         {
           this.state.isAdmin && <AddProperty notify={this.handlePropertyAdded}/>
         }
-        <div className="Dashboard__left Dashboard__col">
-          <PropertiesList />
-        </div>
-        <div className="Dashboard__right Dashboard__col">
-          <MapContainer />
+        <div className="Dashboard__grid">
+          <div className="Dashboard__left Dashboard__col">
+            <PropertiesList />
+          </div>
+          <div className="Dashboard__right Dashboard__col">
+            <MapContainer />
+          </div>
         </div>
       </div>
     );

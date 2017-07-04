@@ -49,7 +49,7 @@ export default class Map extends Component {
       );
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     this.getAllMaps();
   }
 

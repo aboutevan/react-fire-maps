@@ -4,6 +4,12 @@
     float: left;
   }
 
+  .Dashboard__grid:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   .Dashboard__left {
     width: 400px;
   }

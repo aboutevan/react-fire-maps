@@ -7,20 +7,35 @@ class PropertiesList extends Component {
     properties: [],
   }
   getListings() {
-    getMaps()
+    const allProperties = [];
+    return getMaps()
         .then((snapshot) => {
-          const allProperties = [];
           snapshot.forEach(childSnap => {
             allProperties.push({name: childSnap.val().propertyName, address: childSnap.val().address, id: childSnap.key});
           })
-          this.setState({properties: allProperties})
+          return allProperties;
         })
   }
+
   componentDidUpdate(prevProps, prevState) {
-    this.getListings();
+    this.getListings()
+      .then(allProperties => {
+        if (allProperties.length !== this.state.properties.length) {
+          this.setState({properties: allProperties});
+        }
+      });
+
   }
   componentDidMount() {
-    this.getListings();
+    this.getListings()
+      .then(allProperties => {
+        this.setState({properties: allProperties});
+      });
+  }
+  componentWillUnmount() {
+    this.setState({
+      unmounting: true
+    })
   }
   render() {
     return (

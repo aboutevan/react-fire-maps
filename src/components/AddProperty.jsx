@@ -47,9 +47,11 @@ export default class AddProperty extends Component {
       geocoder.geocode({
         'address' : config.address
       }, (results) => {
-        config.lat = results[0].geometry.location.lat();
-        config.lng = results[0].geometry.location.lng();
-        cb();
+        if (results[0]) {
+          config.lat = results[0].geometry.location.lat();
+          config.lng = results[0].geometry.location.lng();
+          cb();
+        }
       });
     }
   }
