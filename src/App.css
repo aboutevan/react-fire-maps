@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.Nav {
+  background-color: #EA2E49;
+  padding: 20px;
+}
+
+.Nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Nav li {
+  padding: 0;
+  display: inline-block;
+}
+
+.Nav a{
+  color: #fff;
+  padding: 5px;
+}
+
+.Nav a:hover{
+  color: #DAEDE2;
+  padding: 5px;
+}

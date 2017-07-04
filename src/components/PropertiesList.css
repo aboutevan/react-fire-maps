@@ -1,0 +1,30 @@
+.PropertiesList ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.PropertiesList li {
+  min-height: 50px;
+  padding: 1rem 20px;
+}
+
+.PropertiesList li:nth-child(2n) {
+  background: #efefef;
+}
+
+.PropertiesList__name {
+  display: block;
+  color: #ea2e49;
+  text-align: left;
+  width: 49%;
+  float: left;
+}
+
+.PropertiesList__address {
+  display: block;
+  float: right;
+  width: 49%;
+  font-size: 0.9rem;
+  text-align: right;
+}

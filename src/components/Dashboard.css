@@ -1,0 +1,15 @@
+@media screen and (min-width: 768px) {
+  .Dashboard__col {
+    display: inline-block;
+    float: left;
+  }
+
+  .Dashboard__left {
+    width: 400px;
+  }
+
+  .Dashboard__right {
+    width: calc(100% - 400px);
+  }
+}
+
