@@ -14,7 +14,6 @@ export default class Map extends Component {
       scrollwheel: false,
     }
 
-    // create map
     this.map = new gMaps.Map(this.mapNode, mapConfig);
 
     // add markers
@@ -32,7 +31,7 @@ export default class Map extends Component {
       .then((snapshot) => {
         const allCoords = [];
         // snapshot is 'maps', childSnap each entry
-        // save each entry to allCoords so
+        // save each entry to allCoords
         snapshot.forEach((childSnap) => {
           allCoords.push([
             childSnap.val().lat,
@@ -42,7 +41,6 @@ export default class Map extends Component {
         })
         return allCoords;
       })
-      // load map only after all markers have been configured
       .then((allCoords) => {
           this.loadMap(allCoords);
         }
